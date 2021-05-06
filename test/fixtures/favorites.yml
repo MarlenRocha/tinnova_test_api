@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  beer: one
+  user: one
+  favorite: MyString
+
+two:
+  beer: two
+  user: two
+  favorite: MyString
