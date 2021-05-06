@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "2c7661bd-8aa7-431c-a6c6-4ba568451514",
+		"name": "TIINOVA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ALL BEERS",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjAxODAzMDAsImlkIjoxLCJuYW1lIjoiQWRtaW4iLCJ1c2VybmFtZSI6ImFkbWluIn0.udqH_brsIERDCZcd-Q90Zx3ceAx6Vb-mq69g5b-HNd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/beers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"beers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALL BEERS user1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjAyNzIxMjUsImlkIjozLCJuYW1lIjoiVXNlcjEiLCJ1c2VybmFtZSI6InVzZXIxIn0.5k4rf2knmE_sEDERFd_Y5WuG6zOWmCs3CXsk1IKjTM0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/beers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"beers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"user\": {\n  \"username\": \"admin\",\n  \"password\": \"admin\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjAyNzIxMzYsImlkIjozLCJuYW1lIjoiVXNlcjEiLCJ1c2VybmFtZSI6InVzZXIxIn0.e-vttvXsH7vDY0butiIiq8XrnJyPR58shLr7budGwjo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"user\": {\n  \"username\": \"user1\",\n  \"password\": \"user1\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BEER CREATE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjAyNjk3MzgsImlkIjoxLCJuYW1lIjoiQWRtaW4iLCJ1c2VybmFtZSI6ImFkbWluIn0.j35Ce-2LqDyDRyztIyH1Vt791nYrrNAb6GluqGNontk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{     \n        \"beer_id\": 1,\n        \"user_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/beers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"beers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BEER CREATE user1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjAyNzIxMjUsImlkIjozLCJuYW1lIjoiVXNlcjEiLCJ1c2VybmFtZSI6InVzZXIxIn0.5k4rf2knmE_sEDERFd_Y5WuG6zOWmCs3CXsk1IKjTM0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{     \n        \"beer_id\": 1,\n        \"user_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/beers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"beers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BEER SHOW",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/beers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"beers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALL FAVORITES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/favorites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE FAVORITES",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjAyNzIxMzYsImlkIjozLCJuYW1lIjoiVXNlcjEiLCJ1c2VybmFtZSI6InVzZXIxIn0.e-vttvXsH7vDY0butiIiq8XrnJyPR58shLr7budGwjo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{     \n        \"beer_id\": 1,\n        \"user_id\": 1,\n        \"fav\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/favorites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
